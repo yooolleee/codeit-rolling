@@ -1,16 +1,28 @@
-# React + Vite
+## 💻 프로젝트 실행 방법
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+```
+npm run dev
+```
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📚 설치된 라이브러리 및 패키지 
 
-## React Compiler
+- 리액트 라우터 돔
+- Eslint (Airbnb)
+- prettier
+- reset.css
+- Path alias
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+## 📂 폴더 구조
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- app : 앱의 진입점인 main.jsx 포함
+- components : 컴포넌트 정의
+  - common : 공통 컴포넌트 정의
+- pages : 페이지 컴포넌트 정의
+- shared : 프로젝트 전역에서 사용되는 내용 정의
+  - api : api 정의
+  - route : 라우팅 설정 (페이지 경로)
+  - styles : css 설정
+
+
