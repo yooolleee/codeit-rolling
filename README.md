@@ -26,3 +26,10 @@ npm run dev
   - styles : css 설정
 
 
+## 🔍경로 설정
+
+- @ 
+- @/app 
+- @/components
+- @/pages
+- @/shared
