@@ -7,7 +7,7 @@ npm run dev
 
 ## 📚 설치된 라이브러리 및 패키지 
 
-- 리액트 라우터 돔
+- React Router Dom
 - Eslint (Airbnb)
 - prettier
 - reset.css
