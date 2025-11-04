@@ -43,3 +43,10 @@ import Home from '@/pages/home/Home.jsx'
 ```
 
 
+## 컨벤션 git push 테스트중 
+
+- Feat : 기능 
+
+- style : style 추가 
+
+- chore : 잡다한 수정 사항 
