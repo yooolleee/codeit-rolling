@@ -33,3 +33,11 @@ npm run dev
 - @/components
 - @/pages
 - @/shared
+
+### 사용 예시
+
+```javascript
+import Home from '@/pages/home/Home.jsx'
+```
+
+
