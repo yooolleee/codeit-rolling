@@ -19,6 +19,7 @@ npm run dev
 ```bash
 src/
 ├── app/               # 앱의 진입점 (예: main.jsx)
+├── pages/             # 페이지 컴포넌트 정의
 ├── components/        # 컴포넌트 정의
 │   └── common/        # 공통 컴포넌트 정의
 └── shared/            # 전역 리소스 및 설정
@@ -36,10 +37,23 @@ src/
 - @/pages
 - @/shared
 
-### 사용 예시
-
 ```javascript
 import Home from '@/pages/home/Home.jsx'
+```
+
+
+## 깃 커밋 컨벤션
+```git
+[1] Feat : 기능 추가
+
+ex) "Feat : 버튼 공용컴포넌트 추가"
+    "Feat : 로그인 페이지 추가"
+
+[2] Fix : 코드 수정
+
+ex) "Fix : 버튼 핸들러 오류 수정"
+    "Fix : 헤더 컴포넌트 마진값 변경 및 간격 통일"
+Chore : 그 외 모든 수정사항 => "Chore : 리드미 내용 수정"
 ```
 
 
