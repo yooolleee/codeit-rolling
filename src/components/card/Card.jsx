@@ -4,23 +4,23 @@ import styles from './Card.module.css';
 
 function Card({
   sender, 
-  content, 
-  createdAt,
   profileImageUrl,
   relationship,
+  content, 
+  createdAt,
 }) {
   return (
-    <div className={styles.container}>
-      <div className={styles.header}>
-        <ProfileImage profileImageUrl={profileImageUrl}/>
-        <div className={styles.senderInfo}>
-          <p className={styles.sender}>From. {sender}</p>
-          <RelationBadge relationship={relationship}/>
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <ProfileImage imageUrl={profileImageUrl}/>
+          <div className={styles.senderInfo}>
+            <p className={styles.sender}>From. {sender}</p>
+            <RelationBadge relationship={relationship}/>
+          </div>
         </div>
+        <div className={styles.content}>{content}</div>
+        <p className={styles.createdAt}>{createdAt}</p>
       </div>
-      <div className={styles.content}>{content}</div>
-      <p className={styles.createdAt}>{createdAt}</p>
-    </div>
   );
 }
 

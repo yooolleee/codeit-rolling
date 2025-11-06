@@ -1,7 +1,7 @@
 import styles from './ProfileImage.module.css';
 
-function ProfileImage({profileImageUrl}) {
-  const src = profileImageUrl;
+function ProfileImage({imageUrl}) {
+  const src = imageUrl;
 
   return (
     <div className={styles.container}>
