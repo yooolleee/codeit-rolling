@@ -21,4 +21,12 @@
   --btn-primary-color-enabled: #ffffff;
   --btn-primary-color-disabled: #ffffff;
   --Purple-900: #5603A7;
+
+
+  /* Secondary 색상 토큰 */
+  --purple-100: #F8F0FF;
+  --purple-600: #9935FF;
+  --purple-700: #861DEE;
+  --purple-800: #6E0AD1;
+  --gray-300: #CCCCCC;
 }

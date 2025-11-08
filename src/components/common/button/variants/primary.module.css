@@ -1,22 +1,15 @@
 .button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   font-weight: 600;
-  font-family: 'Pretendard', sans-serif;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  gap: 10px;
-  transition: background-color 0.2s ease, box-shadow 0.2s ease;
-
-  background-color: var(--btn-primary-bg-enabled);
-  color: var(--btn-primary-color-enabled);
 
   width: 208px;
   height: 56px;
   border-radius: 12px;
   padding: 14px 24px;
+  gap: 10px;
+
+  background-color: var(--btn-primary-bg-enabled);
+  color: var(--btn-primary-color-enabled);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 /* --- 상태 클래스 --- */
