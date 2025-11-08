@@ -9,6 +9,7 @@ const variantStyles = {
   outlined,
 };
 
+// 주석 달기
 export function getButtonClasses({ variant = 'primary', state = 'enabled' }) {
   const styles = variantStyles[variant];
   if (!styles) return base.buttonBase;
