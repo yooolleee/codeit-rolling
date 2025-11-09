@@ -1,25 +1,70 @@
 /** @type {import("stylelint").Config} */
 export default {
   extends: ['stylelint-config-standard', 'stylelint-config-css-modules'],
+  plugins: ['stylelint-order'],
   rules: {
-    // ✅ camelCase, kebab-case, snake_case 모두 허용
-    'selector-class-pattern': '^[a-zA-Z0-9_-]+$',
+    // ✅ 속성 순서 정렬 규칙 추가
+    'order/properties-order': [
+      [
+        // 🔹 1. 박스 모델 관련
+        'display',
+        'position',
+        'top',
+        'right',
+        'bottom',
+        'left',
+        'z-index',
 
-    // ✅ CSS Modules에서 사용하는 compose 문법 허용
-    'property-no-unknown': [
-      true,
-      {
-        ignoreProperties: ['composes'],
-      },
+        // 🔹 2. 박스 사이즈 관련
+        'width',
+        'height',
+        'min-width',
+        'min-height',
+        'max-width',
+        'max-height',
+
+        // 🔹 3. 여백 및 패딩
+        'margin',
+        'margin-top',
+        'margin-right',
+        'margin-bottom',
+        'margin-left',
+        'padding',
+        'padding-top',
+        'padding-right',
+        'padding-bottom',
+        'padding-left',
+
+        // 🔹 4. 테두리 / 모서리
+        'border',
+        'border-radius',
+
+        // 🔹 5. 타이포그래피
+        'font-family',
+        'font-size',
+        'font-weight',
+        'line-height',
+        'letter-spacing',
+        'text-align',
+        'color',
+
+        // 🔹 6. 기타
+        'background',
+        'background-color',
+        'gap',
+        'cursor',
+        'transition',
+      ],
+      { unspecified: 'bottomAlphabetical' },
     ],
 
-    'color-hex-length': 'long',
+    // ✅ CSS Modules 문법 허용
+    'property-no-unknown': [true, { ignoreProperties: ['composes'] }],
 
-    // ✅ 중복 속성, 잘못된 색상 등 기본 문법 체크
+    // ✅ 기타 스타일 규칙
+    'selector-class-pattern': '^[a-zA-Z0-9_-]+$',
+    'color-hex-length': 'long',
     'declaration-block-no-duplicate-properties': true,
     'color-no-invalid-hex': true,
-
-    // ⚙️ 불필요한 경고 제거 (중첩 관련)
-    'no-descending-specificity': null,
   },
 };
