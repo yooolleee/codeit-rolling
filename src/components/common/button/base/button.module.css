@@ -1,12 +1,11 @@
 .buttonBase {
   display: inline-flex;
+  border: none;
+  font-family: Pretendard, sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
   align-items: center;
   justify-content: center;
-
-  border: none;
-  cursor: pointer;
-  font-family: 'Pretendard', sans-serif;
-  transition: all 0.2s ease;
 }
 
 /* 디자인 시스템 작업 완료되면 삭제 */
@@ -17,10 +16,9 @@
   --btn-primary-bg-pressed: #6E0AD1;
   --btn-primary-bg-focus: #6E0AD1;
   --btn-primary-bg-disabled: #CCCCCC;
-
   --btn-primary-color-enabled: #ffffff;
   --btn-primary-color-disabled: #ffffff;
-  --Purple-900: #5603A7;
+  --purple-900: #5603A7;
 
 
   /* Secondary 색상 토큰 */

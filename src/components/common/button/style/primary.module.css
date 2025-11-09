@@ -1,26 +1,24 @@
 .button {
-  font-weight: 600;
-
   width: 208px;
   height: 56px;
-  border-radius: 12px;
   padding: 14px 24px;
-  gap: 10px;
-
-  background-color: var(--btn-primary-bg-enabled);
+  border-radius: 12px;
+  font-weight: 600;
   color: var(--btn-primary-color-enabled);
+  background-color: var(--btn-primary-bg-enabled);
+  gap: 10px;
   transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 /* --- 상태 클래스 --- */
 .enabled {
-  background-color: var(--btn-primary-bg-enabled);
   color: var(--btn-primary-color-enabled);
+  background-color: var(--btn-primary-bg-enabled);
 }
 
 .disabled {
-  background-color: var(--btn-primary-bg-disabled);
   color: var(--btn-primary-color-disabled);
+  background-color: var(--btn-primary-bg-disabled);
   cursor: not-allowed;
   opacity: 0.8;
 }
@@ -34,18 +32,17 @@
 }
 
 .focus {
+  border: 2px solid var(--purple-900);
   background-color: var(--btn-primary-bg-focus);
-  border: 2px solid var(--Purple-900);
 }
 
 /* --- 반응형 --- */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .button {
     width: 122px;
     height: 40px;
-
-    border-radius: 6px;
     padding: 7px 16px;
+    border-radius: 6px;
     font-size: 14px;
   }
 }
