@@ -9,8 +9,10 @@ const variantStyles = {
   outlined,
 };
 
-export function getButtonClassName({ variant, state }) {
+export function getButtonClassName({ variant, state, size }) {
   const styles = variantStyles[variant];
+  const sizeClassName =
+    variant === 'outlined' ? styles[`size${size}`] : styles.button;
 
   if (!styles) {
     throw new Error(`지정되지 않은 스타일 variant ${variant}`);
@@ -20,7 +22,11 @@ export function getButtonClassName({ variant, state }) {
     throw new Error(`지정되지 않은 타입 ${state}`);
   }
 
-  return [base.buttonBase, styles.button, styles[state]].join(' ');
+  if (variant === 'outlined' && !sizeClassName) {
+    throw new Error(`지정되지 않은 사이즈 : ${size}`);
+  }
+
+  return [base.buttonBase, sizeClassName, styles[state]].join(' ');
 }
 
 // UX & DX 고려한 환경 분기 코드

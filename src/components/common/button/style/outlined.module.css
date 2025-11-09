@@ -1,6 +1,5 @@
 /* === 상태별 === */
 
-/* Enabled */
 .enabled {
   border: 1px solid #d1d1d1;
   color: #000000;
@@ -8,7 +7,6 @@
   opacity: 1;
 }
 
-/* Hover */
 .hover {
   border: 1px solid #c8c8c8;
   color: #000000;
@@ -16,7 +14,6 @@
   opacity: 1;
 }
 
-/* Pressed */
 .pressed {
   border: 1px solid #c2c2c2;
   color: #000000;
@@ -24,7 +21,6 @@
   opacity: 1;
 }
 
-/* Focus */
 .focus {
   border: 1px solid #000000;
   background-color: #ffffff;
@@ -33,7 +29,6 @@
   outline-offset: 1px;
 }
 
-/* Disabled */
 .disabled {
   border: 1px solid #d9d9d9;
   color: #ffffff;
@@ -43,6 +38,18 @@
 }
 
 /* === 사이즈별 === */
+
+.size50 {
+  width: 192px;
+  height: 56px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: -0.01em;
+  gap: 10px;
+}
+
 
 /* Outlined 40 */
 .size40 {
@@ -77,17 +84,7 @@
   font-weight: 400;
   line-height: 22px;
   letter-spacing: -0.01em;
-  gap: 8px;
-}
-
-/* === 아이콘 유무 === */
-.withIcon {
   gap: 10px;
-}
-
-/* 비활성화 버튼 : pointer-event 방지 */
-button:disabled {
-  pointer-events: none;
 }
 
 .icon24 {
