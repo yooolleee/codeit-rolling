@@ -22,11 +22,9 @@
 }
 
 .focus {
-  border: 1px solid #000000;
+  border: 1px solid #555555;
   background-color: #ffffff;
   opacity: 1;
-  outline: 2px solid #000000;
-  outline-offset: 1px;
 }
 
 .disabled {
@@ -39,7 +37,7 @@
 
 /* === 사이즈별 === */
 
-.size50 {
+.size56 {
   width: 192px;
   height: 56px;
   padding: 14px 16px;
@@ -50,9 +48,8 @@
   gap: 10px;
 }
 
-
-/* Outlined 40 */
 .size40 {
+  width: 122px;
   height: 40px;
   padding: 8px 16px;
   border-radius: 6px;
@@ -63,8 +60,8 @@
   gap: 10px;
 }
 
-/* Outlined 36 */
 .size36 {
+  width: 122px;
   height: 36px;
   padding: 6px 16px;
   border-radius: 6px;
@@ -75,8 +72,8 @@
   gap: 10px;
 }
 
-/* Outlined 28 */
 .size28 {
+  width: 122px;
   height: 28px;
   padding: 2px 12px;
   border-radius: 6px;
@@ -97,4 +94,9 @@
   width: 20px;
   height: 20px;
   flex-shrink: 0;
+}
+
+.disabled .icon20,
+.disabled .icon24 {
+  filter: brightness(0) invert(1);
 }

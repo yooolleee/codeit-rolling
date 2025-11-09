@@ -1,8 +1,8 @@
 export function validateButtonSize(size) {
-  const allowedSizes = [50, 40, 36, 28];
+  const allowedSizes = [56, 40, 36, 28];
 
   if (!size) {
-    return 50;
+    return 56;
   }
 
   if (!allowedSizes.includes(size)) {

@@ -9,33 +9,27 @@ const variantStyles = {
   outlined,
 };
 
-export function getButtonClassName({ variant, state, size }) {
+function resolveOutlinedSizeClass(styles, size, isIcon) {
+  const isFluid = isIcon && size !== 56;
+  const classKey = `size${size}${isFluid ? 'Fluid' : ''}`;
+  const sizeClass = styles[classKey] ?? styles[`size${size}`];
+
+  if (!sizeClass) {
+    throw new Error(`지정되지 않은 사이즈: ${size}`);
+  }
+
+  return sizeClass;
+}
+
+export function getButtonClassName({ variant, state, size, isIcon = false }) {
   const styles = variantStyles[variant];
+  if (!styles) throw new Error(`지정되지 않은 스타일 variant: ${variant}`);
+  if (!styles[state]) throw new Error(`지정되지 않은 타입 state: ${state}`);
+
   const sizeClassName =
-    variant === 'outlined' ? styles[`size${size}`] : styles.button;
-
-  if (!styles) {
-    throw new Error(`지정되지 않은 스타일 variant ${variant}`);
-  }
-
-  if (!styles[state]) {
-    throw new Error(`지정되지 않은 타입 ${state}`);
-  }
-
-  if (variant === 'outlined' && !sizeClassName) {
-    throw new Error(`지정되지 않은 사이즈 : ${size}`);
-  }
+    variant === 'outlined'
+      ? resolveOutlinedSizeClass(styles, size, isIcon)
+      : styles.button;
 
   return [base.buttonBase, sizeClassName, styles[state]].join(' ');
 }
-
-// UX & DX 고려한 환경 분기 코드
-// if (!styles) {
-//   const message = `지정되지 않은 스타일 variant: ${variant}`;
-//   if (process.env.NODE_ENV === 'development') {
-//     throw new Error(message);
-//   } else {
-//     console.warn(message);
-//     return base.buttonBase; // UX 보호용 fallback
-//   }
-// }

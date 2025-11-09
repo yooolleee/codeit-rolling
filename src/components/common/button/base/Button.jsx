@@ -10,10 +10,6 @@ export default function Button({
   isIcon = false,
   ...props
 }) {
-  if (state !== 'disabled' && typeof props.onClick !== 'function') {
-    console.warn(`Button("${buttonName}")에 대해서 onClick 핸들러를 정의할 것`);
-  }
-
   if (variant === 'outlined') {
     props.size = validateButtonSize(props.size);
     validateButtonIcon({ variant, size: props.size, isIcon });
