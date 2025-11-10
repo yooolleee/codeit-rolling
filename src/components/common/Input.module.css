@@ -1,0 +1,52 @@
+
+* {
+  box-sizing: border-box;
+}
+
+.input {
+  width: 320px;
+  height: 50px;
+  padding: 12px 16px;
+  border: 1px solid #CCCCCC;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  font-size: 16px;
+  color: #181818;
+}
+
+/* placeholder 색상 */
+.input::placeholder {
+  color: #555555;
+}
+
+/* 활성 상태 (focus) */
+.input:focus {
+  border: 2px solid #555555;
+  outline: none;
+}
+
+/* 에러 상태 (기본) */
+.input.error {
+  border: 1px solid #DC3A3A;
+}
+
+/* 에러이면서 포커스된 상태 */
+.input.error:focus {
+  border: 1px solid #DC3A3A;
+}
+
+/* 비활성 상태 */
+.input:disabled {
+  background-color: #F9FAFB;
+  color: #999999;
+  border-color: #CCCCCC;
+}
+
+/* 에러 메시지 */
+.errorMessage {
+  color: #DC3A3A;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+
