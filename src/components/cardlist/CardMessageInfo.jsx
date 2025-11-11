@@ -1,20 +1,27 @@
 import CardList from './CardList';
+import styles from './CardMessageInfo.module.css';
 
 function CardMessageInfo({ name, profileImages, messageCount }) {
   return (
     <div>
       <div>
-        <span>To. {name}</span>
+        <span className={styles.name}>To. {name}</span>
       </div>
-      <div>
+      <div className={styles.profileWrapper}>
         {profileImages.map((profileImage, idx) => (
-          <img key={idx} src={profileImage} />
+          <img
+            key={idx}
+            src={profileImage}
+            alt={`profile-${idx}`}
+            className={styles.profileImage}
+            style={{ zIndex: profileImages.length - idx }} // 뒤에 올수록 살짝 밑으로 감춤
+          />
         ))}
-        <div>+{messageCount - 3}</div>
+        <div className={styles.profileCount}>+{messageCount - 3}</div>
       </div>
-      <div>
-        <span>{messageCount}</span>
-        <span>명이 작성했어요!</span>
+      <div className={styles.messageCount}>
+        <span className={styles.messageCountNumber}>{messageCount}</span>
+        <span className={styles.messageCountText}>명이 작성했어요!</span>
       </div>
     </div>
   );

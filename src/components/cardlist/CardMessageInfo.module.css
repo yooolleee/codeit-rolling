@@ -1,0 +1,49 @@
+.name {
+  color: #181818;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+}
+.profileWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.profileImage {
+  width: 28px;
+  height: 28px;
+  border-radius: 50px;
+  object-fit: cover;
+  border: 1.5px solid #ffffff;
+  margin-left: -8px;
+  position: relative;
+}
+
+.profileImage:first-child {
+  margin-left: 0;
+}
+
+.profileCount {
+  display: inline-block;
+  margin-left: -6px;
+  position: relative;
+  padding: 5px 6px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  background-color: #ffffff;
+  border-radius: 30px;
+}
+.messageCount {
+  padding: 12px 0 43px 0;
+  font-size: 16px;
+  line-height: 26px;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.12);
+}
+.messageCountNumber {
+  font-weight: 700;
+}
+.messageCountText {
+  font-weight: 400;
+}

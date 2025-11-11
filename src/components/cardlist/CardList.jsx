@@ -1,5 +1,6 @@
 import CardMessageInfo from './CardMessageInfo';
 import CardReactionBar from './CardReactionBar';
+import styles from './CardList.module.css';
 
 function CardList({
   name,
@@ -9,7 +10,8 @@ function CardList({
   background,
 }) {
   return (
-    <div>
+    <div className={styles.container}>
+      <div className={styles.containerShape}></div>
       <CardMessageInfo
         name={name}
         profileImages={profileImages}

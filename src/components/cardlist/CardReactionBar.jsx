@@ -1,10 +1,12 @@
+import styles from './CardReactionBar.module.css';
+import ReactionBadge from '@components/common/badge/reactionBadge/ReactionBadge';
+
 function CardReactionBar({ reactions }) {
   return (
-    <div>
+    <div className={styles.container}>
       {reactions.map((reaction, idx) => (
         <div key={idx}>
-          <div>{reaction.emoji}</div>
-          <div>{reaction.count}</div>
+          <ReactionBadge emoji={reaction.emoji} count={reaction.count} />
         </div>
       ))}
     </div>
