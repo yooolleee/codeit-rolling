@@ -20,4 +20,5 @@
   border: 1px solid var(--gray-300);
   border-radius: 6px;
   background-color: var(--white);
+  cursor: pointer;
 }
