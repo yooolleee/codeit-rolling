@@ -2,7 +2,7 @@
   position: relative;
   width: 384px;
   height: 280px;
-  background-color: #ffffff;
+  background-color: var(--white);
   border-radius: 16px;
   padding: 28px 24px;
   font-family: Pretendard;
