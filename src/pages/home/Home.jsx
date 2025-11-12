@@ -1,3 +1,9 @@
+import RelationBadge from '@components/common/badge/relationBadge/RelationBadge.jsx';
+
 export default function Home() {
-  return <div>테스트용 작성</div>;
+  return (
+    <div>
+      <RelationBadge title="지인" />
+    </div>
+  );
 }
