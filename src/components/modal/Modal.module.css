@@ -11,6 +11,7 @@
   z-index: 999;
 }
 .modal {
+  box-sizing: border-box;
   padding: 40px;
   width: 600px;
   background-color: #ffffff;

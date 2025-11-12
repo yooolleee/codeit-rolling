@@ -8,14 +8,12 @@ function ModalHeader({ imageUrl, name, badge, createAt }) {
       <div className={styles.header}>
         <div className={styles.userInfo}>
           <ProfileImage imageUrl={imageUrl} />
-          {/* <div className={styles.profileImg}>{profileImg}</div> */}
           <div>
             <div className={styles.name}>
               <span className={styles.label}>From.</span>
               <span className={styles.username}>{name}</span>
             </div>
-            <RelationBadge badgeName={'동료'} />
-            {/* <div className={styles.badge}>{badge}</div> */}
+            <RelationBadge badgeName={badge} />
           </div>
         </div>
         <div className={styles.date}>{createAt}</div>

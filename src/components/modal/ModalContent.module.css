@@ -24,8 +24,10 @@
 }
 
 .message {
+  font-family: Pretendard, sans-serif;
   font-size: 18px;
   font-weight: 400;
   color: #5a5a5a;
   line-height: 1.56;
+  letter-spacing: -1%;
 }
