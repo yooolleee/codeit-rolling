@@ -18,7 +18,12 @@
   bottom: 0;
   width: 142px;
   height: 142px;
-  background-image: url('./assets/pattern_01.png');
   background-repeat: no-repeat;
+  z-index: -1;
+}
+.valueImage .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3); /* 어두운 반투명 레이어 */
   z-index: -1;
 }
