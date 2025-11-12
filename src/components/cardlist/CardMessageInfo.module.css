@@ -25,7 +25,11 @@
 }
 
 .profileCount {
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 33px;
+  height: 28px;
   margin-left: -6px;
   position: relative;
   padding: 5px 6px;
