@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "@/components/common/Dropdown.module.css";
-import arrowDown from "@/components/common/dropdown/png/arrow-down.png";
-import arrowTop from "@components/common/dropdown/png/arrow-top.png";
+import arrowDown from "@/components/assets/arrow-down.png";
+import arrowTop from "@components/assets/arrow-top.png";
 
 /**
  * Dropdown Component
