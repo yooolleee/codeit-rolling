@@ -1,5 +1,5 @@
 import styles from "@/components/option/BackgroundOption.module.css";
-import checkIcon from "@/components/option/png/Enabled.png";
+import checkIcon from "@/components/assets/Enabled.png";
 
 /**
  * 
