@@ -37,8 +37,8 @@ jobs:
                   "color": 3447003,
                   "fields": [
                     {"name": "👤 리뷰어", "value": $reviewer, "inline": true},
-                    {"name": "📌 리뷰 상태", "value": $state, "inline": true},
-                    {"name": "💬 리뷰 코멘트", "value": ($body // "No comment")}
+                    {"name": "📌 승인 여부", "value": $state, "inline": true},
+                    {"name": "💬 리뷰 내용", "value": ($body // "No comment")}
                   ]
                 }
               ]
