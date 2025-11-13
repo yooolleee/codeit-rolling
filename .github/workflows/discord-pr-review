@@ -22,7 +22,7 @@ jobs:
 
           # JSON payload 생성
           PAYLOAD=$(jq -n \
-            --arg content "**🔍 Pull Request Review Submitted**" \
+            --arg content "**🔍 PR 리뷰가 작성되었습니다. **" \
             --arg reviewer "$REVIEWER" \
             --arg state "$REVIEW_STATE" \
             --arg body "$REVIEW_BODY" \
