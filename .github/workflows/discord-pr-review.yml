@@ -22,7 +22,7 @@ jobs:
 
           # JSON payload 생성
           PAYLOAD=$(jq -n \
-            --arg content "**🔍 Pull Request Review Submitted**" \
+            --arg content "**🔍 PR 리뷰가 작성되었습니다. **" \
             --arg reviewer "$REVIEWER" \
             --arg state "$REVIEW_STATE" \
             --arg body "$REVIEW_BODY" \
@@ -36,9 +36,9 @@ jobs:
                   "url": $prurl,
                   "color": 3447003,
                   "fields": [
-                    {"name": "👤 Reviewer", "value": $reviewer, "inline": true},
-                    {"name": "📌 State", "value": $state, "inline": true},
-                    {"name": "💬 Review Comment", "value": ($body // "No comment")}
+                    {"name": "👤 리뷰어", "value": $reviewer, "inline": true},
+                    {"name": "📌 승인 여부", "value": $state, "inline": true},
+                    {"name": "💬 리뷰 내용", "value": ($body // "No comment")}
                   ]
                 }
               ]
