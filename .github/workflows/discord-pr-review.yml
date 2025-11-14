@@ -12,6 +12,7 @@ jobs:
       - name: Send message to Discord
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          THREAD_ID: "1435138473295085578"  # 필요 없으면 삭제 가능
           REVIEW_STATE: ${{ github.event.review.state }}
           REVIEW_BODY: ${{ github.event.review.body }}
           REVIEWER: ${{ github.event.review.user.login }}
@@ -45,8 +46,8 @@ jobs:
             }'
           )
 
-          # 디스코드 전송
+          # 디스코드 전송 (thread_id 포함)
           curl -H "Content-Type: application/json" \
                -X POST \
                -d "$PAYLOAD" \
-               "$DISCORD_WEBHOOK_URL"
+               "${DISCORD_WEBHOOK_URL}?thread_id=${THREAD_ID}"
